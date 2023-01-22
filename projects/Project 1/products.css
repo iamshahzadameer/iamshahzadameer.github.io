@@ -1,0 +1,207 @@
+
+.main h1{
+    text-align: center;
+    border-bottom: 3px ridge black;
+    background: #e76b18;
+    margin-top: 0px;
+    color: whitesmoke;
+    font-size: 48px;
+    margin: 0px auto;
+}
+.main h2{
+    display: inline-block;
+    margin: 10px 0px 13px 3px;
+    background: #e76b18;
+    padding: 5px;
+    box-shadow: 3px 2px 5px black;
+}
+.main img{
+    width: 100%;
+    margin: 5px 0px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.servcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 auto;
+    margin-bottom: 5px;
+}
+.servbox{
+    display: flex;
+    flex-direction: column;
+    width: 24%;
+    padding: 0px 0px;
+    margin: 5px;
+    border: 1px solid #eee;
+}
+.servbox img{
+    margin: auto;
+    width: 100%;
+    padding: 25px;
+    border: 0px solid grey;
+}
+.servbox h4{
+    margin: 2px 0px;
+    text-align: left;
+    font-size: 16px;
+    background: #eee;
+}
+.cart h5{
+    width: 130px;
+    margin: 1px;
+    margin-top: 10px;
+    color:#e76b18;
+    font-size: 25px;
+    display: inline-block;
+}
+.servbox span{
+    font-size: 14px;
+    text-decoration: line-through;
+    color:grey;
+}
+.servbox a{
+    text-decoration: none;
+    color: black;
+}
+.cart{
+    display: inline-flex;
+    justify-content: space-between;
+    margin-top: auto;
+}
+.cart a{
+    color: white;
+    width: 55px;
+    border-top-left-radius: 30px;
+    padding: 3px 0px 3px 7px;
+    background: black;
+    font-size: 30px;
+    font-family: candara;
+    transition: linear 300ms;
+}
+.cart a:hover{
+    color: white ;
+    background: #e76b18;
+}
+
+/*----------------------Responsiveness of This Page----------------------------*/
+
+@media screen and (max-width:1164px){
+    .servbox h5{
+        font-size: 22px;
+    }
+    .servbox span{
+        font-size: 14px;
+    }
+    .cart a{
+        padding: 2px 0px 2px 5px;
+        font-size: 28px;
+    }
+}
+
+
+@media screen and (max-width:1024px){
+    .servbox{
+        width: 32%;
+    }
+    .servbox img{
+        padding: 18px;
+    }
+    .servbox h5{
+        font-size: 22px;
+    }
+    .servbox span{
+        font-size: 13px;
+    }
+    .cart a{
+        padding: 5px 0px 1px 4px;
+        font-size: 26px;
+    }
+}
+
+
+@media screen and (max-width:900px){
+    .servbox{
+        width: 32%;
+    }
+    .servbox img{
+        padding: 14px;
+    }
+    .servbox h5{
+        font-size: 20px;
+    }
+    .servbox span{
+        font-size: 12px;
+    }
+    .cart a{
+        padding: 5px 0px 1px 4px;
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width:768px){
+    .servbox{
+        width: 31%;
+    }
+    .servbox img{
+        padding: 10px;
+    }
+    .servbox h5{
+        font-size: 20px;
+    }
+    .servbox span{
+        font-size: 12px;
+    }
+    .cart a{
+        padding: 5px 0px 1px 4px;
+        font-size: 26px;
+    }
+}
+@media screen and (max-width:600px){
+    .servbox{
+        width: 31%;
+    }
+    .servbox img{
+        padding: 7px;
+    }
+    .servbox h5{
+        font-size: 18px;
+    }
+    .servbox span{
+        font-size: 11px;
+    }
+    .cart a{
+        padding: 5px 0px 0px 4px;
+        font-size: 24px;
+        width: 43px;
+    }
+}
+@media screen and (max-width:560px){
+    .servbox{
+        width: 45%;
+    }
+    .servbox img{
+        padding: 5px;
+    }
+    .cart a{
+        padding: 5px 0px 1px 2px;
+    }
+}
+@media screen and (max-width:480px){
+    .servbox{
+        width: 45%;
+    }
+    .servbox img{
+        padding: 3px;
+    }
+    .servbox h5{
+        font-size: 17px;
+    }
+    .servbox span{
+        font-size: 10px;
+    }
+    .cart a{
+        padding: 5px 0px 1px 2px;
+    }
+}

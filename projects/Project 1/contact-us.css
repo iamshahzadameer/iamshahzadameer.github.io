@@ -1,0 +1,60 @@
+form{
+    display: flex;
+    flex-direction: column;
+    background: url(images/banner5.jpg);
+    align-items: center;
+}
+form h4{
+    color: whitesmoke;
+    margin: 2px 0px;
+    border-bottom: 1px solid #eee;
+    background: #e76b18;
+    padding: 5px;
+    box-shadow: 3px 2px 5px black;
+}
+input{
+    margin: 10px;
+    width:500px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #eee;
+    background: transparent;
+    color: whitesmoke;
+}    
+textarea{
+    margin: 10px;
+    width:500px;
+    min-height: 200px;
+    max-height: 550px;
+    border: none;
+    color: whitesmoke;
+    outline: none;
+    background: rgba(0,0,0,0.3);
+}
+button{
+    width: 100px;
+    margin: 5px;
+    background: #e76b18;
+    outline: none;
+    font-size: 16px;
+    font-weight: 540;
+    padding: 3px;
+    border: none;
+    color: white;
+}
+button:hover{
+    background: gold;
+    color: black;
+}
+
+
+/* -----------------Responsiveness------------ */
+
+@media screen and (max-width:500px){
+    input,textarea{
+        width: 80%;
+    }
+    button{
+        justify-self: flex-start;
+    }
+}

@@ -1,0 +1,411 @@
+body{
+    background: white;
+}
+header{
+    height: 598px;
+}
+.container{
+    width: 100%;
+    overflow-x: hidden;
+}
+.behindimg img{
+    position: absolute;
+    left: 67%;
+    width: 33%;
+    z-index: -2;
+}
+.downhead h2{
+    float: left;
+    margin: 200px 0px 0px 80px;
+    width: 70vw;
+    font-family: calibri;
+    font-size: 45px;
+    font-weight: lighter;
+}
+.searchbox{
+    display: flex;
+    position: relative;
+    top: 100px;
+    left:70px;
+    padding: 10px;
+    background: transparent;
+    z-index: 1;
+    width: 70%;
+}
+.searchbox input{
+    width: 65vw;
+    height: 67px;
+    border: 1px solid grey;
+    outline: none;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-size:20px;
+    font-family: calibri;
+}
+.searchbox input::placeholder{
+    font-size: 14px;
+}
+.searchbox i{
+    font-size: 25px;
+    position: relative;
+    right: 46px;
+    top: 15px;
+    background: #e21b70;
+    display: inline-flex;
+    height: 35px;
+    border-radius: 20px;
+    padding: 6px 5px;
+    transition: background 200ms;
+}.searchbox i:hover{
+    background: #BB0050;
+}
+.searchbox h1{
+    z-index: 3;
+    padding: 20px 30px;
+    margin: 1px 0 0 0;
+    width: 120px;
+    height: 63px;
+    position: relative;
+    right: 20px;
+    background: #e21b70;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    color: white;
+    font-family: calibri;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background 200ms;
+}
+.searchbox h1:hover{
+    background: #BB0050;
+}
+.searchbox a{
+    text-decoration: #e41b90;
+    color:white;
+}
+.section1 h1{
+    margin: 5px 0px 5px 87px;
+    font-family: calibri;
+    font-weight: 300;
+}
+.section1 img{
+    width: 100%;
+    
+}
+.section2 h2{
+    margin: 5px 0px 5px 10px;
+    font-family: calibri;
+    font-weight: 300;
+    font-size: 32px;
+}
+.section2{
+    width: 90%;
+    margin: auto;
+}
+.servcontainer{
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+}
+.servbox{
+    margin: 10px auto;
+    height: 270px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    background-position: center center;
+}
+    .ct1{
+        background: url(../images/city-images/abbotabad.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    .ct2{
+        background: url(../images/city-images/bahawalpur.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    .ct3{
+        background: url(../images/city-images/deraghazikhan.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    .ct4{
+        background: url(../images/city-images/faisalabad.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    .ct5{
+        background: url(../images/city-images/gujranwala.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    .ct6{
+        background: url(../images/city-images/gujrat.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    .ct7{
+        background: url(../images/city-images/hydarabad.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    .ct8{
+        background: url(../images/city-images/islamabad.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    .ct9{
+        background: url(../images/city-images/jehlam.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    .ct10{
+        background: url(../images/city-images/kamoke.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    .ct11{
+        background: url(../images/city-images/karachi.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    .ct12{
+        background: url(../images/city-images/lahore.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    .ct13{
+        background: url(../images/city-images/larkana.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    .ct14{
+        background: url(../images/city-images/mangla.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    .ct15{
+        background: url(../images/city-images/mardan.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    .ct16{
+        background: url(../images/city-images/multan.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    .ct17{
+        background: url(../images/city-images/murree.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    .ct18{
+        background: url(../images/city-images/okara.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    .ct19{
+        background: url(../images/city-images/panoaqil.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    .ct20{
+        background: url(../images/city-images/peshawar.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    .ct21{
+        background: url(../images/city-images/quetta.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    .ct22{
+        background: url(../images/city-images/rahimyarkhan.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    .ct23{
+        background: url(../images/city-images/rawalpindi.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    .ct24{
+        background: url(../images/city-images/sadiqabad.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    .ct25{
+        background: url(../images/city-images/sahiwal.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    .ct26{
+        background: url(../images/city-images/sargodha.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    .ct27{
+        background: url(../images/city-images/shekhupura.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    .ct28{
+        background: url(../images/city-images/sialkot.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    .ct29{
+        background: url(../images/city-images/sukkar.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    .ct30{
+        background: url(../images/city-images/wahcantt.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+
+.titles{
+    display: flex;
+    background: transparent;
+    justify-content: space-between;
+    padding: 7px;
+    margin-top: 220px;
+    transition: background 300ms linear;
+    border-radius: 10px;
+}
+
+.titles:hover{
+    background: rgba(0,0,0,0.7);
+    font-size: 20px;
+}
+.titles h1{
+    color:white;
+    font-family: calibri;
+    margin: 0px;
+    font-size: 26px;
+}
+.titles a{
+    text-decoration: none;
+    background: #e21b70;
+    border-radius: 5px;
+    color:white;
+    font-size: 32px;
+}
+section3{
+    width: 90%;
+    margin: auto;
+}
+.section3 h1{
+    margin: 5px 0px 5px 65px;
+}
+.banner3{
+    width: 100%;
+    margin: 10px auto 150px auto;
+    height: 300px;
+    background: #e21b70;
+    font-family: calibri;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+.banner3 h2{
+    color: white;
+    width: 520px;
+    display: inline-block;
+    padding-top: 40px;
+    margin: 0px 0px 30px 65px;
+    font-weight: 300;
+}
+.banner3 p{
+    color: white;
+    width: 570px;
+    display: inline-block;
+    font-size: 18px;
+    margin: 0px;
+    margin-left: 65px;
+}
+.store{
+    width: 570px;
+    height: 60px;
+    margin: 20px 0px 70px 66px;
+    display: flex;
+    justify-content: space-around;
+}
+.store img{
+    width: 100%;
+    height: 55px;
+    margin: auto;
+}
+
+.section4 h1{
+    margin: 5px 0px 5px 65px;
+    font-family: calibri;
+    font-weight: 300;
+}
+.section4 img{
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.section5{
+    width: 90%;
+    margin: auto;
+    font-family: calibri;
+    color:#333;
+}
+.section5 h1{
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 35px;
+    color: #333;
+}
+.section5 li{
+    list-style-type: '✓';
+}
+.section5 li::marker{
+    color:#e21b70;
+    font-weight: 600;
+}
+.quis{
+    margin-left: 30px;
+}
+.quis p{
+    margin: 5px auto;
+}
+.quis p b{
+    font-size: 19px;
+}
+.section5 p{
+    font-size: 18px;
+    margin: 3px auto;
+}
+.section5 h6{
+    font-size: 26px;
+    margin: 15px 8%;;
+}
+/*------------------------------Responsivness------------------------------------*/
+
+@media screen and (max-width:960px){
+    .behindimg img{
+    left: 50%;
+    width: 50%;
+    }
+    .servcontainer{
+        width: 100%;
+        display: flex;
+        
+    margin: auto;
+    }
+    .section3{
+        margin-top: 100px;
+    }
+}
+@media screen and (max-width:765px){
+
+}

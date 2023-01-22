@@ -1,0 +1,549 @@
+*{
+    box-sizing: content-box;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+}
+body a{
+    text-decoration: none;
+}
+.topbar{
+    background: #009FE3;
+    padding: 10px 40px;;
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    align-items: center;
+}
+.topbar a{
+    color: white;
+    font-family: segoe ui;
+}
+.topbar a:hover{
+    color: #1A5E81;
+}
+.rside a{
+    font-weight: 500;
+    padding: 0px 10px;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    overflow-x: hidden;
+    background: white;
+}
+/* .nav img{
+    width: 15%;
+    padding-left: 15px;
+    padding-right: 0px;
+} */
+.nav .image img{
+    width: 200px;
+}
+.nav ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+.nav ul a{
+    color: grey;
+    font-family: segoe ui;
+    font-size: 17px;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    padding: 0 10px;
+    padding-bottom: 5px;
+    transition: 200ms;
+}
+.nav a:hover{
+    color: #009FE3;
+    border-bottom: 2px solid #009FE3;
+}
+.nav .menu input{
+    display: none;
+}
+.nav .menu label{
+    font-size: 16px;
+    font-weight: bold;
+    font-family: segoe ui;
+    background-color: #D59543;
+    padding: 8px;
+    border-radius: 8px;
+    margin-right: 10px;
+    user-select: none;
+    cursor: pointer;
+    display: none;
+}
+.nav .menu label:hover{
+    background-color: #009FE3;
+}
+.slideshow{
+    height: 55vh;
+}
+.banner1{
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+.slidingimages img{
+    width: 100%;
+}
+.slidingimages{
+    width: 100%;
+    display: flex;
+    animation: slide 16s infinite;
+}
+@keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(0);
+    }
+    30%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(-100%);
+    }
+    55%{
+        transform: translateX(-200%);
+    }
+    75%{
+        transform: translateX(-200%);
+    }
+    80%{
+        transform: translateX(-300%);
+    }
+    100%{
+        transform: translateX(-300%);
+    }
+}
+.section1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin-bottom: 10px;
+    align-content: center;
+}
+.desc-section1{
+    font-family: Segoe UI;
+    width: 75%;
+    padding: 60px;
+}
+.sec-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+}
+.sec-img img{
+    width: 100%;
+    margin: 0px 0px 20px 0px;
+    position: relative;
+}
+.side-img{
+    position: relative;
+}
+.textdata{
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: rgba(0,0,0,0.3);
+    font-family: segoe ui;
+    font-weight: 600;
+    font-size: 32px;
+    width: 100%;
+    cursor: pointer;
+    transition: 500ms;
+    transition: font-size 500ms;
+}
+.textdata:hover{
+    background: #0183bb6e;
+    font-size: 36px;
+}
+.t1{
+    height: 92%;
+}
+.t2{
+    height: 92%;
+}
+.bannerimage{
+    width: 100%;
+    height: 600px;
+    background: url(../images/banners/banner-1.jpg);
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.applybox{
+    height: 400px;
+    width: 600px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: segoe ui;
+}
+.cbox{
+    width: 92%;
+    border: 2px solid #eee;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cbox h1{
+    margin: 10px 0px;
+}
+.cbox p{
+    width: 90%;
+    color: grey;
+    text-align: center;
+    margin: 10px 0;
+}
+button{
+    margin: 10px 0px;
+    width: 120px;
+    height: 35px;
+    outline: none;
+    border: none;
+    background: #009FE3;
+    color: white;
+    font-size: 18px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 500ms;
+}
+button:hover{
+    background: black;
+}
+.des-side-1{
+    width: 500px;
+    display: inline-block;
+    margin: 50px 60px;
+    text-align: center;
+    font-family: segoe ui;
+}
+.des-side-1 button{
+    width: 150px;
+}
+.text-side{
+    border: 2px solid #eee;
+    padding: 60px;
+}
+span{
+    padding-bottom: 5px;
+    border-bottom: 3px solid #009FE3;
+}
+.image-side{
+    width: 500px;
+    display: inline-block;
+    margin: 40px;
+    padding: auto 40px;
+    position: relative;
+}
+.image-side img{
+    width: 100%;
+}
+.t3{
+    height: 99%;
+}
+.t4{
+    height: 99%;
+}
+.sub-sec-2{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sub-sec-1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.calcu{
+    height: 170px;
+    background: #009FE3;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: georgie;
+}
+.cal{
+    text-align: center;
+    font-size: 22px;
+}
+.cal h1{
+    margin: 0;
+}
+.cal p{
+    margin: 5px;
+}
+.depbox{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.boxes{
+    width: 200px;
+    height: 200px;
+    color: white;
+    cursor: pointer;
+    font-family: segoe ui;
+    font-weight: 300;
+    position: relative;
+    margin: 10px 5px;
+    transition: background-position 200ms;
+}
+.boxes:hover{
+    background-position: center right;
+}
+.boxes h2{
+    width: 97%;
+}
+.boxes h2,h3{
+    margin: 0;
+    padding: 3px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 5px;
+}
+.boxes h3{
+    margin-top: 8px;
+    padding-top: 10px;
+    border-top: 2px solid white;
+    display: inline-block;
+    opacity: 0%;
+    transition: opacity 200ms;
+}
+.boxes h3:hover{
+    opacity: 100%;
+}
+.box1{
+    background: url(../images/banners/section-3-side-img-1-academics.jpg);
+    background-size: cover;
+}
+.box2{
+    background: url(../images/banners/section-3-side-img-1-administration.jpg);
+    background-size: cover;
+}
+.box3{
+    background: url(../images/banners/section-3-side-img-1-Examination.jpg);
+    background-size: cover;
+}
+.box4{
+    background: url(../images/banners/section-3-side-img-1-marketting.jpg);
+    background-size: cover;
+}
+.box5{
+    background: url(../images/banners/section-3-side-img-1-studentportal.jpg);
+    background-size: cover;
+}
+.final{
+    margin-bottom: 10px;
+}
+/*--------------------------footer-------------------------------*/
+
+footer{
+    font-family: segoe ui;
+}
+
+.topfoot{
+    height: 100%;
+    background: #222222;
+    color: #f2ffff;
+    display: flex;
+    padding: 35px;
+    
+}
+.topfoot a{
+    text-decoration: none;
+    color: #f2ffff;
+    transition: color 200ms;
+}
+.topfoot a:hover{
+    color: #009FE3;
+}
+.sides{
+    flex-basis: 24%;
+    padding: 10px;
+}
+.side1{
+    flex-basis: 24%;
+    padding: 10px;
+}
+.side1 img{
+    width: 90%;
+}
+.side1 p{
+    margin: 5px;
+    line-height: 25px;
+    color: lightgrey;
+}
+.side2{
+    padding-top: 0px;
+}
+.side2 ul{
+    margin: 0;
+    padding: 15px;
+    padding-top: 0px;
+}
+.side2 ul li{
+    line-height: 40px;
+    border-bottom: 1px solid grey;
+}
+.side2 h1{
+    display: inline-block;
+    border-bottom: 3px solid #009FE3;
+    padding-bottom: 5px;
+}
+.side3 p{
+    margin: 5px;
+}
+.side3 div{
+    margin-top: 10px;
+}
+.side3 div a{
+    padding: 0 5px;
+}
+.side4{
+    height: 200px;
+}
+.botfoot{
+    height: 70px;
+    background: #121212;
+    color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*----------------Responsiveness----------------------*/
+
+@media screen and (max-width:1024px){
+    .topfoot{
+        flex-wrap: wrap;
+    }
+    .sides{
+        flex-basis: 30%;
+    }
+    .slideshow{
+        height: 50vh;
+    }
+    .boxes{
+        width: 300px;
+        height: 300px;
+    }
+}
+@media screen and (max-width:900px){
+    .topfoot{
+        flex-wrap: wrap;
+    }
+    .sides{
+        flex-basis: 45%;
+    }
+    .slideshow{
+        height: 40vh;
+    }
+    .nav{
+        flex-direction: column;
+        margin: 0;
+    }
+    .nav ul{
+	    flex-wrap: wrap;
+    }
+    .nav .image img{
+        width: 300px;
+    }
+}
+@media screen and (max-width:750px){
+    .nav img{
+        padding-right: 0px;
+    }
+    .section1{
+        flex-direction: column;
+    }
+    .sub-sec-1{
+        flex-direction: column;
+    }
+    .sub-sec-2{
+        flex-direction: column;
+    }
+    .sub-sec-1 .des-side-1{
+        order: -1;
+    }
+    .applybox{
+        height: 40%;
+        width: 60%;
+    }
+    .topfoot{
+        flex-direction: column;
+    }
+    .applybox{
+        width: 60%;
+        height: 50%;
+    }
+    .cbox{
+        width: 95%;
+        height: 95%;
+    }
+    .rside a:nth-child(1){
+        display: none;
+    }
+    .rside a:nth-child(2){
+        display: none;
+    }
+}
+@media screen and (max-width:600px){
+    .nav{
+        flex-direction: row;
+    }
+    .nav ul{
+        flex-direction: column;
+        display: none;
+    }
+    .nav ul li{
+        text-align: center;
+    }
+    .nav ul a{
+        display: block;
+        color: rgb(58, 84, 164);
+        padding: 15px;
+        border: none;
+    }
+    .nav ul a:hover{
+        background-color: #D59543;
+        border: none;
+        color: rgb(255, 255, 255);
+    }
+    .nav .menu label{
+        display: inline-block;
+    }
+    .nav .menu input:checked ~ ul{
+        display: block;
+        width: 100%;
+        position: absolute;
+        right: 0;
+        top: 135px;
+        z-index: 1;
+        background-color: rgb(255, 255, 255);
+        border-radius: 5px;
+    }
+    .nav .menu .collapse{
+        position: relative;
+    }
+}

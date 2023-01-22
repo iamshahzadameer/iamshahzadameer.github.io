@@ -1,0 +1,97 @@
+*{
+    user-select: none;
+}
+article{
+     background: url(images/login-bg-4.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 720px;
+    position: relative;
+}
+form{
+    margin: 0px;
+    width: 320px;
+    height: 420px;
+    background: whitesmoke;
+    border-radius: 30px;
+    color: black;
+    top: 52%;
+    left: 66%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 10px 30px;
+}
+form h2{
+    text-align: center;
+    color: #e76b18;
+    display: inline-block;
+    margin: 10px 26px;
+    text-shadow: 2px 2px 3px #DEDEDC;
+    border-radius: 15px;
+    padding: 5px;
+    border-bottom: 2px solid #e76b18;
+    padding-bottom: 5px;
+}
+form h3{
+    margin: 5px 0px 10px 0px;
+    background: #e76b18;
+    box-shadow: 1px 1px 3px black;
+    color: white;
+    border-radius: 30px;
+    padding: 3px;
+    text-align: center;
+}
+form input{
+    border: none;
+    outline: none;
+    background: none;
+    border: 1px solid #DEDEDC;
+    height: 30px;
+    width: 260px;
+    border-radius: 30px;
+    padding-left: 10px;
+}
+form input[type="submit"]{
+    margin: 10px auto;
+    width: 130px;
+    text-align: center;
+    color: #e76b18;
+    border: 1px solid #e76b18;
+}
+form input[type="submit"]:hover{
+    background: #e76b18;
+    color: white;
+}
+form input[type="password"]{
+    color: #e76b18;
+}
+form a{
+    text-decoration: none;
+    color: grey;
+    font-size: 12px;
+}
+form a:hover{
+    color: #e76b18;
+}
+form p{
+    margin: 3px 0px;
+    font-weight: 600px;
+}
+form img{
+    width: 130px;
+    display: flex;
+    margin: 5px auto;
+    border-radius: 20px;
+    padding: 4px;
+    border-bottom: 2px solid #e76b18;
+    border-top: 2px solid grey;
+}
+
+/* ---------------Responsiveness----------------- */
+@media screen and (max-width:768px){
+    form{
+        left: 50%;
+        top: 50%;
+    }
+}

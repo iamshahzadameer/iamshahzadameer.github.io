@@ -1,0 +1,88 @@
+.container{
+}
+.login-panel{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 550px;
+    margin: 10% auto;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    font-family: calibri;
+}
+.login-panel h1{
+    margin: 20px 0px 5px 24px;
+}
+.login-panel p{
+    margin: 2px 0px 2px 24px;
+    font-size: 18px;
+}
+.login-panel p a{
+    text-decoration: none;
+    color: #e21b70;
+    font-weight: 600;
+}
+.login-panel ul{
+    list-style: none;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+
+.login-panel ul li a{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    margin: 20px 20px;
+    font-size: 18px;
+    font-family: calibri;
+    padding: 10px 30px;
+    border-radius: 6px;
+}
+
+.appleid{
+    color: white;
+    background: black;
+    transition: color 200ms;
+}
+.appleid:hover{
+    color: #e21b70;
+}
+.googleid{
+    color: #333;
+    background: linear-gradient(to right, rgba(234,67,53,1.8),rgba(251,188,5,1.8),rgba(52,168,83,1.8),rgba(66,133,244,1.8));
+    box-shadow: -1px 1px 2px lightgrey;
+    border: 1px solid #eee;
+    transition: color 200ms;
+}
+.googleid:hover{
+    color:#e21b70;
+}
+.facebookid{
+    color: white;
+    background: #1877f2;
+    transition: color, background 200ms;
+}
+.facebookid:hover{
+    color: #e21b70;
+    background: #66a2ef;
+}
+.login{
+    color: white;
+    background: #c21760;
+    text-align: center;
+    transition: color, background 200ms;
+}
+.login:hover{
+    background: #fdf2f7;
+    color: #c21760;
+}
+.signup{
+    color:#c21760;
+    background: #FDF2F7;
+    border: 1px solid rgb(234, 129, 174);
+    transition: border 200ms;
+}
+.signup:hover{
+    border: 1px solid #eee;
+}
