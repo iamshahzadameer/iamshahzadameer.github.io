@@ -14,18 +14,21 @@
     <nav>
         <h1 class="reset"><div></div>Shahzad Ameer</h1>
         <div class="drop-menu">
-            <button class="menu">Menu</button>
+            <button class="menu"><i class="fa-solid fa-bars"></i></button>
             <ul>
                 <li><a href="images/CV.jpg" target="_blank">CV</a></li>
                 <li><a href="#profile">Profile</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contacts">Contacts</a></li>
-                <li><a href="#about" class="aboutbtn">About</a></li>
+                <li><span class="aboutbtn">About</span></li>
             </ul>
         </div>
     </nav>
     <div class="container">
-        <section id="main">
+        <div class="pre-loader">
+            <div class="loader"></div>
+        </div>
+        <section id="main" class="sections">
             <div class="ripple-background">
                 <div class="circle xxlarge shade1"></div>
                 <div class="circle xlarge shade2"></div>
@@ -35,7 +38,7 @@
             </div>
             <h3>Shahzad Ameer Portfolio Shahzad Ameer Portfolio Shahzad Ameer Portfolio Shahzad Ameer Portfolio</h3>
             <div class="image">
-                <img src="images/profile.JPG" alt="">
+                <img src="images/profile.PNG" alt="">
             </div>
             <div class="content">
                 <h1>Hello!</h1>
@@ -47,8 +50,8 @@
             </div>
         </section>
         <hr class="hr">
-        <section id="profile">
-            <h1> <div></div> Profile</h1>
+        <section id="profile" class="sections">
+            <h1> <i class="fa-solid fa-id-card-clip"></i></i>Profile</h1>
             <div class="details">
                 <div><span>Name</span>Muhammad Shahzad</div>
                 <div><span>Age</span>23</div>
@@ -66,8 +69,8 @@
             </div>
         </section>
         <hr class="hr">
-        <section id="projects">
-            <h1> <div></div> Projects</h1>
+        <section id="projects" class="sections">
+            <h1><i class="fa-solid fa-file"></i> Projects</h1>
             <div class="container project-1">
                 <div class="details">
                     <div class="det-1">
@@ -142,19 +145,19 @@
             </div>
         </section>
         <hr class="hr">
-        <section id="contacts">
-            <h1> <div></div> Contacts</h1>
+        <section id="contacts" class="sections">
+            <h1> <i class="fa-solid fa-square-phone"></i> Contacts</h1>
             <div class="container">
                 <a href="https://www.instagram.com/iamshahzadameer" target="_blank"><i class="fa-brands fa-instagram"></i>Instagram</a>
                 <a href="https://www.facebook.com/iamshahzadameer" target="_blank"><i class="fa-brands fa-facebook"></i>Facebook</a>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shahzad3878@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i>shahzad3878@gmail.com</a>
-                <a href="callto:03142722800"><i class="fa-solid fa-phone"></i>0314-2722800</a>
+                <a href=""><i class="fa-solid fa-phone"></i>0314-2722800</a>
             </div>
         </section>
-        <section id="about">
+        <section id="about" class="sections">
             <div class="container">
                 <div class="det-1">
-                    <i class="fa-solid fa-circle-xmark crossbtn">Close</i>
+                    <i class="fa-solid fa-circle-xmark crossbtn"></i>
                     <h1>Hi, I am Shahzad</h1>
                     <p>
                         I'm a graduated student from Riphah Internation College Sargodha. I've studied computer sciences & 
@@ -164,13 +167,22 @@
                     </p>
                     <h1>Why Web-Development?</h1>
                     <p>
-                        It gives me the ability to express me creatively on the internet & Enchance my computer skills. 
-                        Its dream-work for me since childhood & i love to solve problems which are associated to IT. 
-                        As well as, Web Development is a modern work, it is highly demanded & can be done for a long time, It a never ending job until the presence of internet. 
-                        Web-Development is everything assicated to internet and can split into multiple IT fields like Programming, 
-                        Graphics Designing, Blogging, Writing, Editing (Photo-Video), AI and Software Developement. 
-                        Web-Development also enchances the ability to create, problem-solving, hard-working, design-thinking & provides 
-                        many opportunities anywhere in the world.
+                        <li>It gives me the ability to express me creatively on the internet & Enchance my computer skills.</li>
+                        <li>Its dream-work for me since childhood & i love to solve problems which are associated to IT.</li>
+                        <li>As well as, Web Development is a modern work, it is highly demanded & can be done for a long time.</li>
+                        <li>It a never ending job until the presence of internet.</li>
+                        <li>Web-Development also enchances the ability to create, problem-solving, hard-working, design-thinking & provides many opportunities anywhere in the world.</li>
+                        <ul class="list2">
+                            <li>Web-Development is everything assicated to internet and can split into multiple IT fields like </li>
+                            <li>Programming</li>
+                            <li>Graphics Designing</li>
+                            <li>Blogging</li>
+                            <li>Writing</li>
+                            <li>Editing (Photo-Video)</li>
+                            <li>AI & Data Science</li>
+                            <li>Software Developement.</li>
+                        </ul>
+                            
                     </p>
                     <h1>Reference</h1>
                     <p>
@@ -180,7 +192,7 @@
                 <div class="det-2">
                     <div class="edu">
                         <h3>Qualification & Certifications</h3>
-                        <p>Associate Degree Program - Computer Sciences (Graduation)</p>
+                        <p>ADP - Computer Sciences (Graduation)</p>
                         <p>Microsoft Office 2013 Expert Certificate</p>
                     </div>
                     <div class="hobbies">
@@ -207,27 +219,24 @@
     </div>
     <script>
         var cbtn = document.querySelector(".crossbtn");
-        var profile = document.querySelector("#profile");
-        var projects = document.querySelector("#projects");
-        var contacts = document.querySelector("#contacts");
-        var about = document.querySelector("#about");
-        var hrline = document.querySelectorAll('hr');
+        var reset = document.querySelector(".reset");
         var aboutbtn = document.querySelector(".aboutbtn");
-        console.log(hrline);
-        cbtn.onclick = function(){
-            about.style.display = "none";
-            profile.style.display = "block";
-            projects.style.display = "block";
-            contacts.style.display = "block";
-            hrline.style.width = "10px";
+        reset.onclick = function(){
+            window.location.reload();
         }
         aboutbtn.onclick = function(){
-            about.style.display = "block";
-            profile.style.display = "none";
-            projects.style.display = "none";
-            contacts.style.display = "none";
-            hrline.style.width = "10px";
+            about.style.left = "0";
+            about.style.width = "100vw";
         }
+        cbtn.onclick = function(){
+            about.style.left = "-120%";
+            about.style.width = "0";
+        }
+        const fade = () => {
+            const preLoader = document.querySelector('.pre-loader');
+            preLoader.classList.add('fade');
+        };
+        window.addEventListener('load', fade);
     </script>
 </body>
 </html>
