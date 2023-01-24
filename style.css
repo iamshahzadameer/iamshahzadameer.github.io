@@ -2,8 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
 *{
     box-sizing: border-box;
-    /* font-family: 'Roboto', sans-serif; */
-    font-family: 'Ubuntu', sans-serif;
+    font-family: sans-serif;
 }
 body{
     margin: 0;
@@ -13,19 +12,21 @@ hr{
 }
 body > .container{
     position: relative;
+    overflow: hidden;
 }
 /* ====================navigation-bar=================== */
 nav{
     display: flex;
-    width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 25px;
+    padding: 25px;
     box-shadow: 3px 0px 3px grey;
     background-color: white;
     z-index: 3;
     position: sticky;
     top: 0px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 nav h1{
     margin: 0;
@@ -34,6 +35,7 @@ nav h1{
     user-select: none;
     padding: 8px;
     transition: .2s;
+    cursor: pointer;
 }
 nav h1 div{
     width: 16px;
@@ -71,9 +73,22 @@ nav ul li a{
     font-weight: bold;
     margin: 0 10px;
     transition: .2s;
+    user-select: none;
 }
 nav ul li a:hover{
     color: orangered;
+}
+nav ul li span{
+    color: #585858;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: .2s;
+    user-select: none;
+}
+nav ul li span:hover{
+    color: orangered;
+    cursor: pointer;
 }
 nav .menu{
     display: none;
@@ -85,22 +100,55 @@ body > .container{
     display: grid;
     grid-template-columns: 1fr;
     margin: 0 auto;
-    width: 90%;
+    width: 100%;
     user-select: none;
     position: relative;
-    background-color: rgb(255, 255, 255);
-    box-shadow: inset 2px 3px 100px #5858581f;
-    backdrop-filter: blur(3px);
+    box-shadow: inset 2px 0px 100px #5858581f;
+}
+body > .container .pre-loader{
+    position: fixed;
+    inset: 0;
+    z-index: 9;
+    background-color: #ffffff;
+    display: grid;
+    place-items: center;
+    transition: opacity 0.25s visibility 1s;
+    color: rgb(255, 255, 255);
+}
+body > .container .fade{
+    opacity: 0;
+    visibility: hidden;
+}
+body > .container .pre-loader .loader{
+    width: 50px;
+    height: 50px;
+    border: 7px solid gray;
+    border-radius: 50%;
+    border-top: 7px solid orangered;
+    animation: loader 1s linear infinite;
+    
+}
+@keyframes loader{
+    0% {
+        transform: rotate(0deg) scale(100%);
+    }
+    50%{
+        transform: rotate(180deg) scale(120%);
+    }
+    100%{
+        transform: rotate(360deg) scale(100%);
+    }
 }
 #main{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 90vh;
+    min-height: 100vh;
     width: auto;
     margin-bottom: 50px;
     position: relative;
     overflow: hidden;
+    padding: 50px;
 }
 #main .image img{
     width: 400px;
@@ -108,19 +156,10 @@ body > .container{
     border: 10px solid rgba(255, 68, 0, 0.616);
     padding: 5px;
 }
-@keyframes bor{
-    0%{
-        border: 10px solid orangered;
-    }
-    33%{
-        border: 10px solid rgb(133, 133, 0);
-    }
-    70%{
-        border: 10px solid sandybrown;
-    }
-    100%{
-        border: 10px solid rgba(0, 66, 110, 0.568);
-    }
+#main .image img:hover{
+    transition: .2s;
+    border-color: rgba(255, 68, 0, 0.582);
+    box-shadow: 0 0 15px rgb(95, 94, 94);
 }
 #main .content{
     width: 50%;
@@ -150,7 +189,7 @@ body > .container{
     word-spacing: 10px;
     transform: scale(200%);
     color: rgb(175, 175, 175);
-    font-family: ubuntu ;
+    font-family: Ubuntu ;
 }
 /* ====================Profile Section================= */
 
@@ -160,20 +199,22 @@ body > .container{
     flex-direction: column;
     margin: 50px 0px;
     align-items: center;
+    background-image: url(images/bg.JPG);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 #profile > h1{
     font-size: 42px;
     color: orangered;
     display: flex;
     align-items: center;
+    margin: 0;
+    text-transform: uppercase;
+    font-family: ubuntu;
 }
-#profile > h1 div{
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: orangered;
-    display: inline-block;
-    margin-right: 5px;
+#profile > h1 i{
+    font-size: 34px;
 }
 #profile #cv{
     text-decoration: none;
@@ -185,43 +226,65 @@ body > .container{
 }
 #profile .details{
     font-size: 1.5em;
-    margin-left: 20px;
-    align-self: flex-start;
+    align-self: center;
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: 100%;
+    padding: 20px;
 }
 #profile .details div{
     margin: 5px 0px;
 }
 #profile .details span{
-    background-color: orangered;
-    color: white;
+    background-color: rgba(255, 68, 0, 0.11);
+    color: orangered;
+    border: 2px solid orangered;
     padding: 5px 10px;
     text-align: center;
     display: inline-block;
     width: 250px;
     font-weight: bold;
     margin-right: 10px;
+    border-radius: 10px;
+}
+#profile .details span:hover{
+    transition: .2s;
+    box-shadow: 0 0 5px orangered;
+    border-color: rgba(255, 68, 0, 0.575);
+    background-color: rgba(255, 68, 0, 0.171);
+}
+#profile .details span:hover ~ div{
+    color: red;
+}
+#profile .details .skills h1{
+    color: white;
+    background-color: rgba(255, 68, 0, 0.733);
+    text-align: center;
+    border-radius: 15px;
 }
 #profile .details .skills .pr{
     display: flex;
     align-items: center;
 }
 #profile .details .skills .pr > div{
+    border-radius: 20px;
     width: 60%;
     height: 30px;
     background-color: rgba(255, 68, 0, 0.308);
     display: flex;
     align-items: center;
-    padding: 0 4px;
     margin-right: 5px;
+    border: 2px solid rgba(126, 78, 5, 0.568);
 }
 #profile .details .skills .pr .progress{
-    background: orangered;
-    height: 75%;
+    background: linear-gradient(to right, rgba(255, 68, 0, 0.26) , orangered);
+    height: 100%;
     text-align: end;
     color: white;
-    padding: 2px;
+    padding: 4px;
     font-weight: 400;
     font-size: 18px;
+    border-radius: 20px;
 }
 #profile .details .skills .pr .prg-1{
     width: 85%;
@@ -241,32 +304,38 @@ body > .container{
 /* ====================Projects Section================= */
 #projects{
     margin: 50px 0;
+    display: flex;
+    flex-direction: column;
 }
 #projects .container{
-    margin: 50px 0;
+    align-self: center;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 30px;
 }
 #projects > h1{
     font-size: 42px;
     color: orangered;
     display: flex;
     align-items: center;
+    align-self: center;
+    margin-top: 0;
+    text-transform: uppercase;
+    font-family: ubuntu;
 }
-#projects > h1 div{
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: orangered;
-    display: inline-block;
-    margin-right: 5px;
+#projects > h1 i{
+    font-size: 34px;
 }
 #projects .container .details{
     display: flex;
-    justify-content: space-between;
     width: 100%;
+    flex-direction: column;
 }
 #projects .container .image{
     margin: 0 auto;
-    width: fit-content;
+    width: 100%;
+    order: -1;
 }
 #projects .container .image img{
     width: 100%;
@@ -282,7 +351,7 @@ body > .container{
     color: #585858;
 }
 #projects .container .details .det-2{
-    width: 80%;
+    width: 100%;
 }
 #projects .det-2 p{
     margin-top: 0;
@@ -320,28 +389,24 @@ body > .container{
     color: #108a00;
     display: flex;
     align-items: center;
-}
-#contacts > h1 div{
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: #108a00;
-    display: inline-block;
-    margin-right: 5px;
+    margin-top: 0;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: ubuntu;
 }
 #contacts .container{
     display: flex;
-    margin: 0;
     flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
 }
 #contacts .container a{
     text-decoration: none;
     color: #585858;
     font-size: 32px;
-    font-weight: 500;
-    margin: 0 15px;
     transition: .2s;
     color: #585858;
+    margin: 0 5px;
 }
 #contacts .container a:hover{
     color: #108a00;
@@ -349,30 +414,46 @@ body > .container{
 
 /* ====================About Section================= */
 #about{
-    background-color: rgb(255, 255, 255);
-    height: 90vh;
-    position: absolute;
-    top: 2px;
-    display: none;
-    transition: height 3s;
+    height: 100vh;
+    width: 0vw;
+    position: fixed;
+    top: 95px;
+    left: -120%;
+    transition: 1s;
+    backdrop-filter: blur(5px) saturate(0);
 }
-
 #about i{
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
-    padding: 5px;
-    float: right;
+    padding: 10px 0;
+    float: left;
+    width: 100%;
 }
 #about .container{
     display: grid;
     grid-template-columns: 70% 1fr;
     justify-content: space-between;
-    border: 2px solid orangered;
+    border: 2px solid rgb(163, 163, 163);
     border-radius: 5px;
 }
 #about .container .det-1{
     padding: 3px 10px;
-    background-color: #e2e2e2;
+    background-color: white;
+    letter-spacing: 1px;
+    font-family: ubuntu;
+}
+#about .container .list2{
+    padding: 0;
+}
+#about .container .list2 li{
+    margin-left: 40px;
+}
+#about .container .list2 li:first-child{
+    color: black;
+    list-style: none;
+    margin-left: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 #about .container .det-2{
     background-color: orangered;
@@ -427,10 +508,8 @@ body > .container{
     nav .drop-menu .menu{
         display: inline-block;
         border: none;
-        background-color: rgb(163, 163, 163);
         font-size: 18px;
         font-weight: bold;
-        border-radius: 20px;
         padding: 10px;
         margin-bottom: 5px;
     }
@@ -458,7 +537,19 @@ body > .container{
         font-size: 16px;
         color: black;
     }
-
+    nav .drop-menu ul li span{
+        font-size: 16px;
+        color: black;
+    }
+    
+    nav .drop-menu ul li:first-child{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    nav .drop-menu ul li:last-child{
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
 }
 @media  screen and (max-width: 700px){
     #main{
@@ -483,6 +574,7 @@ body > .container{
     }
     #profile .details{
         display: block;
+        align-self: center;
     }
     #profile .details div{
         text-align: center;
@@ -496,26 +588,20 @@ body > .container{
     }
     #profile .details .skills .pr > div{
         width: 95%;
-        background-color: white;
         border: 2px solid orangered;
-    }
-    #profile .details{
-        margin: 0 auto;
     }
     #profile .details .skills .pr .progress{
         font-size: 14px;
     }
+    #projects .container{
+        flex-direction: column;
+    }
     #projects .container .image{
         order: -2;
     }
-    #projects .container .details{
-        flex-direction: column;
-        width: 100%;
-        order: -1;
-    }
-    #projects .container .details .det-2{
-        width: 100%;
-        margin-top: 5px;
+    #about{
+        overflow-y: scroll;
+        height: 90vh;
     }
     #about .container{
         grid-template-columns: 1fr;
@@ -530,4 +616,87 @@ body > .container{
         outline: 10px dotted rgba(255, 68, 0, 0.425);
         outline-offset: -20px;
     }
+}
+@media  screen and (max-width: 450px){
+    #profile{
+        margin: 0;
+    }
+    #projects{
+        margin: 0;
+    }
+    #projects .container{
+        padding: 15px;
+    }
+    #projects .container .details .det-2 a:nth-child(2){
+        background-color: rgb(255, 255, 255);
+        display: block;
+        text-align: center;
+        padding: 5px;
+        border: 2px solid rgba(255, 68, 0, 0);
+        border-radius: 10px;
+    }
+    #projects .container .details .det-2 a:nth-child(2):hover{
+        border: 2px solid orangered;
+        color: orangered;
+        text-decoration: none;
+    }
+    #contacts{
+        margin: 0;
+        background-color:#108a0041;
+        border-top: 1px solid rgba(0, 0, 0, 0.308);
+    }
+    hr:nth-child(6){
+        display: none;
+    }
+    #contacts > h1{
+        text-align: center;
+        display: block;
+        margin: 5px 0;
+        font-size: 28px;
+    }
+    #contacts > h1 div{
+        display: none;
+    }
+    #contacts .container{
+        justify-content: center;
+    }
+    #contacts .container a{
+        font-size: 20px;
+        text-align: center;
+        color: rgb(58, 58, 58);
+    }
+    #contacts .container a i{
+        text-align: start;
+        margin-right: auto;
+    }
+    nav{
+        padding: 10px;
+        top: 0px;
+        border-radius: 20px;
+        box-shadow: inset 0px 0px 8px 2px rgba(255, 255, 255, 0.342);
+        background-color: rgba(255, 255, 255, 0);
+        backdrop-filter: blur(15px);
+    }
+    nav .menu{
+        border-radius: 10px;
+        box-shadow: inset 0px 0px 13px rgba(175, 175, 175, 0.507);
+        background-color: rgba(255, 255, 255, 0.219);
+    }
+    nav .drop-menu ul li{
+        text-align: center;
+    }
+    #about{
+        top: 66px;
+        backdrop-filter: blur(15px) saturate(0);
+    }
+    #projects .details{
+        text-align: center;
+    }
+    #projects .details h1{
+        margin-bottom: 3px;
+    }
+    #about .container .det-1{
+        background-color: rgba(255, 255, 255, 0.233);
+    }
+
 }
