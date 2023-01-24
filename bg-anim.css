@@ -95,5 +95,10 @@
     opacity: 0.5;
   }
 }
-
-/* ------------------Profile-------------- */
+@media  screen and (max-width: 480px){
+  #main .ripple-background{
+    position: absolute;
+    bottom: 60%;
+    right: 50%;
+  }
+}
