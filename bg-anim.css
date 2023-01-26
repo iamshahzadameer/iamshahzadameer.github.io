@@ -13,6 +13,7 @@
   position: absolute;
   border-radius: 50%;
   background: rgba(255, 68, 0, 0.404);
+  background-image: radial-gradient(rgba(255, 68, 0, 0.062), rgba(255, 68, 0, 0.404));
   animation: ripple 15s infinite;
   box-shadow: 0px 0px 1px 0px #ffffff;
   z-index: -1;
@@ -94,11 +95,62 @@
   .shade5{
     opacity: 0.5;
   }
+  @keyframes ripple{
+    0%{
+      transform: scale(0.3);
+    }
+    
+    50%{
+      transform: scale(0.7);
+    }
+    
+    100%{
+      transform: scale(0.3);
+    }
+  }
 }
-@media  screen and (max-width: 480px){
+@media  screen and (max-width: 460px){
   #main .ripple-background{
     position: absolute;
     bottom: 60%;
     right: 50%;
   }
+  @keyframes ripple{
+    0%{
+      transform: scale(0.3);
+    }
+    
+    50%{
+      transform: scale(0.5);
+    }
+    
+    100%{
+      transform: scale(0.3);
+    }
+  }
 }
+@media  screen and (max-width: 364px){
+  #main .ripple-background{
+    position: absolute;
+    bottom: 62%;
+    right: 50%;
+  }
+  @keyframes ripple{
+    0%{
+      transform: scale(0.0);
+    }
+    
+    50%{
+      transform: scale(0.3);
+    }
+    
+    100%{
+      transform: scale(0.0);
+    }
+  }
+  .circle{
+    animation-duration: 10s;
+  }
+}
+
+/* ------------------Profile-------------- */
